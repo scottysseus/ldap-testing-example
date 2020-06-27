@@ -1,0 +1,10 @@
+dn: ou=users,dc=test,dc=com
+objectClass: organizationalUnit
+ou: users
+
+dn: uid=user1,ou=users,dc=test,dc=com
+objectClass: inetOrgPerson
+cn: User
+sn: One
+displayName: User One
+uid: user1
