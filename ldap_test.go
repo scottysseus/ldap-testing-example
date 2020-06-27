@@ -16,7 +16,6 @@ import (
 
 const imageName = "osixia/openldap:1.3.0"
 
-var ip string
 var port nat.Port
 
 type ldapContainerRequest struct {
@@ -61,11 +60,6 @@ func TestMain(m *testing.M) {
 		panic(err)
 	}
 	defer ldapC.Terminate(ctx)
-
-	ip, err = ldapC.Host(ctx)
-	if err != nil {
-		panic(err)
-	}
 
 	ldapPort, _ := nat.NewPort("tcp", "389")
 
